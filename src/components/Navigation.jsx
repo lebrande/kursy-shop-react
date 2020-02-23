@@ -1,18 +1,22 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+
+const activeStyle = {
+  color: 'red',
+};
 
 const Navigation = () => {
   return (
     <ul>
       <li>
-        <Link to="/">Strona główna</Link>
+        <NavLink exact to="/service/www" activeStyle={activeStyle}>WWW</NavLink>
       </li>
       <li>
-        <Link to="/about/us">O nas</Link>
+        <NavLink exact to="/service/shop" activeStyle={activeStyle}>SHOP</NavLink>
       </li>
       <li>
-        <Link to="/about/company">O firmie</Link>
+        <NavLink exact to="/service/seo" activeStyle={activeStyle}>SEO</NavLink>
       </li>
     </ul>
   );
