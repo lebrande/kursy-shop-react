@@ -1,33 +1,48 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Hero from '../components/Hero/Hero';
+import { Component } from 'react';
 
-const Main = () => {
-  const [productsList, setProductsList] = useState([]);
-  useEffect(() => {
+class Main extends Component {
+  state = {
+    productsList: [],
+  }
+
+  componentDidMount() {
     fetch('http://localhost:4000/products')
       .then((response) => {
         return response.json();
       })
-      .then((products) => {
-        setProductsList(products);
+      .then((data) => {
+        this.setState({
+          productsList: data,
+        })
       });
-  }, []);
+  }
 
-  return (
-    <>
-      <Hero />
-      {productsList.map(({ id, name, price }) => (
-        <div key={id}>
-          <h3>{name}</h3>
-          <ul>
-            <li>
-              Cena: {price}
-            </li>
-          </ul>
-        </div>
-      ))}
-    </>
-  );
-};
+  render() {
+    return (
+      <>
+        <Hero />
+        {this.state.productsList.map(({ id, name, price, imagePath }) => (
+          <div className="card" key={id}>
+            <div className="card-image">
+              <figure className="image is-4by3">
+                <img src={imagePath} alt={name} />
+              </figure>
+            </div>
+            <div className="card-content">
+              <div className="media">
+                <div className="media-content">
+                  <p className="title is-4">{name}</p>
+                  <p className="subtitle is-6">{price}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </>
+    );
+  }
+}
 
 export default Main;

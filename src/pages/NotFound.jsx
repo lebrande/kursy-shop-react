@@ -2,13 +2,13 @@ import React from 'react';
 
 const NotFound = () => {
   return (
-    <section class="hero is-link is-fullheight-with-navbar">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title">
+    <section className="hero is-link is-fullheight-with-navbar">
+      <div className="hero-body">
+        <div className="container">
+          <h1 className="title">
             404
           </h1>
-          <h2 class="subtitle">
+          <h2 className="subtitle">
             Nie ma takiej strony
           </h2>
         </div>
