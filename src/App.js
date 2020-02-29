@@ -1,19 +1,17 @@
 import React from 'react';
-import './App.css';
-
-import Main from './pages/Main';
-import Services from './pages/Services';
-import NotFound from './pages/NotFound';
-
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+import Navigation from './components/Navigation/Navigation';
+import Main from './pages/Main';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Navigation />
         <Switch>
           <Route exact path="/" component={Main} />
-          <Route exact path="/service/:service" component={Services} />
           <Route component={NotFound} />
         </Switch>
       </BrowserRouter>

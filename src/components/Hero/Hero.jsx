@@ -1,15 +1,15 @@
 import React from 'react';
 
-const NotFound = () => {
+const Hero = () => {
   return (
-    <section class="hero is-link is-fullheight-with-navbar">
+    <section class="hero is-primary">
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
-            404
+            Platforma Kursów Video 
           </h1>
           <h2 class="subtitle">
-            Nie ma takiej strony
+            Znajdź coś dla siebie
           </h2>
         </div>
       </div>
@@ -17,4 +17,4 @@ const NotFound = () => {
   );
 }
 
-export default NotFound;
+export default Hero;
