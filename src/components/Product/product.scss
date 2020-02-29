@@ -1,0 +1,7 @@
+.product {
+  display: none;
+
+  &.visible {
+    display: block;
+  }
+}
