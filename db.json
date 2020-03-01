@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": "lamp-01",
+      "name": "Bardzo ładna lampa",
+      "description": "Wykonana za aluminum.",
+      "price": 49900,
+      "imagePath": "/images/retro-lampshade-1662061_640.jpg"
+    },
+    {
+      "id": "lamp-02",
+      "name": "Bardzo ładna lampa 2",
+      "description": "Wykonana za aluminum.",
+      "price": 49900,
+      "imagePath": "/images/retro-lampshade-1662061_640.jpg"
+    },
+    {
+      "id": "lamp-03",
+      "name": "Bardzo ładna lampa 3",
+      "description": "Wykonana za aluminum.",
+      "price": 49900,
+      "imagePath": "/images/retro-lampshade-1662061_640.jpg"
+    },
+    {
+      "id": "lamp-04",
+      "name": "Bardzo ładna lampa 4",
+      "description": "Wykonana za aluminum.",
+      "price": 69900,
+      "imagePath": "/images/retro-lampshade-1662061_640.jpg"
+    }
+  ] 
+}
