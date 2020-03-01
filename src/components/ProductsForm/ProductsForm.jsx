@@ -24,7 +24,7 @@ class ProductsForm extends Component {
     })
       .then((response) => response.json())
       .then((newProduct) => {
-        console.log({ newProduct });
+        this.props.onCreateNewProduct(newProduct);
       })
   }
 

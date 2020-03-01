@@ -21,12 +21,12 @@ class HomePage extends Component {
   }
 
   appendNewProduct = (product) => {
-    this.setState((state) => ({
+    this.setState({
       productsList: [
-        ...state.productsList,
+        ...this.state.productsList,
         product,
       ],
-    }))
+    });
   }
 
   render() {
@@ -34,7 +34,7 @@ class HomePage extends Component {
       <>
         <Hero />
         <div className="container">
-          <ProductsForm />
+          <ProductsForm onCreateNewProduct={this.appendNewProduct}/>
         </div>
         <div className="container">
           <div className="columns is-multiline">
