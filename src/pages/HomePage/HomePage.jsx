@@ -24,7 +24,9 @@ class HomePage extends Component {
     return (
       <>
         <Hero />
-        <ProductsForm />
+        <div className="container">
+          <ProductsForm />
+        </div>
         <div className="container">
           <div className="columns is-multiline">
             {this.state.productsList.map((props) => (
