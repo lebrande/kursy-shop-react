@@ -20,6 +20,15 @@ class HomePage extends Component {
       });
   }
 
+  appendNewProduct = (product) => {
+    this.setState((state) => ({
+      productsList: [
+        ...state.productsList,
+        product,
+      ],
+    }))
+  }
+
   render() {
     return (
       <>
