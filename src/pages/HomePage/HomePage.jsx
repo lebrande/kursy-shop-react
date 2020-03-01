@@ -1,9 +1,8 @@
-import React from 'react';
-import Hero from '../components/Hero/Hero';
-import { Component } from 'react';
-import Product from '../components/Product/Product';
+import React, { Component } from 'react';
+import Hero from '../../components/Hero/Hero';
+import Product from '../../components/Product/Product';
 
-class Main extends Component {
+class HomePage extends Component {
   state = {
     productsList: [],
   }
@@ -32,4 +31,4 @@ class Main extends Component {
   }
 }
 
-export default Main;
+export default HomePage;
