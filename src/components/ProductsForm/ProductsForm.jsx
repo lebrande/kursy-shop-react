@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 
 class ProductsForm extends Component {
-  state = {  }
+  state = {
+    name: '',
+    description: '',
+    price: 0,
+  }
 
   createProduct = (e) => {
     e.preventDefault();
 
     const product = {
-      name: 'Bardzo ładna lampa 99',
-      description: 'Wykonana za aluminum.',
-      price: 49900,
+      ...this.state,
       imagePath: '/images/retro-lampshade-1662061_640.jpg'
     };
 
@@ -34,10 +36,46 @@ class ProductsForm extends Component {
             Dodaj produkt
           </p>
           <div className="panel-block is-active">
-            ---
+            <input
+              className="input"
+              type="text"
+              placeholder="Nazwa"
+              value={this.state.name}
+              onChange={(e) => {
+                this.setState({
+                  name: e.target.value,
+                });
+              }}
+            />
+          </div>
+          <div className="panel-block is-active">
+            <input
+              className="input"
+              type="text"
+              placeholder="Opis"
+              value={this.state.description}
+              onChange={(e) => {
+                this.setState({
+                  description: e.target.value,
+                });
+              }}
+            />
+          </div>
+          <div className="panel-block is-active">
+            <input
+              className="input"
+              type="text"
+              placeholder="Cena"
+              value={this.state.price}
+              onChange={(e) => {
+                this.setState({
+                  price: e.target.value,
+                });
+              }}
+            />
           </div>
           <div className="panel-block">
-            <button className="button is-link" onClick={(e) => {
+            <button type="submit" className="button is-link" onClick={(e) => {
               this.createProduct(e);
             }}>
               Dodaj produkt
