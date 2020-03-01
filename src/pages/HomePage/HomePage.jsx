@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Hero from '../../components/Hero/Hero';
 import Product from '../../components/Product/Product';
+import ProductsForm from '../../components/ProductsForm/ProductsForm';
 
 class HomePage extends Component {
   state = {
@@ -23,9 +24,16 @@ class HomePage extends Component {
     return (
       <>
         <Hero />
-        {this.state.productsList.map((props) => (
-          <Product {...props} key={props.id} />
-        ))}
+        <ProductsForm />
+        <div className="container">
+          <div className="columns is-multiline">
+            {this.state.productsList.map((props) => (
+              <div className="column is-4" key={props.id}>
+                <Product {...props} />
+              </div>
+            ))}
+          </div>
+        </div>
       </>
     );
   }
